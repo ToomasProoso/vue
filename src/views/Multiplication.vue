@@ -2,10 +2,10 @@
   <div class="Multiplication table">
     <input v-model.number="x"/>
     <input v-model.number="y"/>
-    <button v-on:click="table()">calculate</button>
+    <button v-on:click="show()">calculate</button>
     <table border="1">
       <tr v-for="row in table">
-        <td v-for="column in row" {{column}}></td>
+        <td v-for="column in row"> {{column}}</td>
       </tr>
     </table>
   </div>
@@ -22,7 +22,7 @@ export default {
     }
   },
   methods: {
-    'table': function () {
+    'show': function () {
       for (let i = 1; i <= this.x; i++) {
         this.table[i - 1] = []
         for (let j = 1; j <= this.y; j++) {
