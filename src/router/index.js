@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Register from "@/views/Register"
 import Login from "@/views/Login"
 import Multiplication from "@/views/Multiplication";
+import Bank from "@/views/Bank";
 
 Vue.use(VueRouter)
 
@@ -30,6 +31,11 @@ const routes = [
     path: '/multiplication',
     name: 'Multiplication',
     component: Multiplication
+  },
+  {
+    path: '/bank',
+    name: 'Bank',
+    component: Bank
   },
 
   {
