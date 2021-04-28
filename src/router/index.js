@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Register from "@/views/Register"
 import Login from "@/views/Login"
 import Multiplication from "@/views/Multiplication";
 import Bank from "@/views/Bank";
+import Register from "@/views/Register"
 
 Vue.use(VueRouter)
 
@@ -13,12 +13,6 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
-  },
-
-  {
-    path: '/register',
-    name: 'Register',
-    component: Register
   },
 
   {
@@ -36,6 +30,12 @@ const routes = [
     path: '/bank',
     name: 'Bank',
     component: Bank
+  },
+
+  {
+    path: '/register',
+    name: 'Register',
+    component: Register
   },
 
   {
