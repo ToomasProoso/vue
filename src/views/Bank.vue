@@ -36,7 +36,7 @@
 <script>
 
 function getBalance() {
-  this.$http.get('http://localhost:8080/banksql/getBalance?accountNr=' + this.accountNr)
+  this.$http.get('api/banksql/getBalance?accountNr=' + this.accountNr)
       .then (response =>{
         console.log(response)
         this.balance = response.data
@@ -47,7 +47,7 @@ function getBalance() {
 }
 
 function createAccount(){
-this.$http.get('http://localhost:8080/banksql/createAccount?accountNr=' + this.newAccountNr + '&balance=0')
+this.$http.get('api/banksql/createAccount?accountNr=' + this.newAccountNr + '&balance=0')
   .then(response =>{
     console.log(response)
     this.newAccount = response.data
@@ -58,7 +58,7 @@ this.$http.get('http://localhost:8080/banksql/createAccount?accountNr=' + this.n
 }
 
 function depositMoney(){
-  this.$http.put('http://localhost:8080/banksql/deposit',{
+  this.$http.put('api/banksql/deposit',{
   accountNumber: this.accountNr1,
   balance: this.deposit})
       .then(response =>{
@@ -71,7 +71,7 @@ function depositMoney(){
 }
 
 function withdrawMoney() {
-  this.$http.put('http://localhost:8080/banksql/withdraw', {
+  this.$http.put('api/banksql/withdraw', {
     accountNumber: this.accountNr2,
     balance: this.withdraw
   })
@@ -85,7 +85,7 @@ function withdrawMoney() {
 }
 
 function transferMoney() {
-  this.$http.put('http://localhost:8080/banksql/transfer', {
+  this.$http.put('api/banksql/transfer', {
     accountNumber: this.accountNr3,
     accountNumber1: this.accountNr4,
     balance: this.transfer

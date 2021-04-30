@@ -5,6 +5,7 @@ import Login from "@/views/Login"
 import Multiplication from "@/views/Multiplication";
 import Bank from "@/views/Bank";
 import Register from "@/views/Register"
+import Bank_login from "@/views/BankLogin"
 
 Vue.use(VueRouter)
 
@@ -22,6 +23,12 @@ const routes = [
   },
 
   {
+    path: '/bank_login',
+    name: 'Bank login',
+    component: Bank_login
+  },
+
+  {
     path: '/multiplication',
     name: 'Multiplication',
     component: Multiplication
@@ -32,6 +39,11 @@ const routes = [
     component: Bank
   },
 
+  {
+    path: '/register',
+    name: 'Register',
+    component: Register
+  },
   {
     path: '/register',
     name: 'Register',

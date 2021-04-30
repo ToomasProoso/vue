@@ -1,6 +1,6 @@
 <template>
   <div class="Login">
-    <input v-model="email" placeholder="enter your email"/>
+    <input v-model="email" placeholder="Please enter your email"/>
 
     <button v-on:click="login()">Login</button>
     <h1>Login please</h1>

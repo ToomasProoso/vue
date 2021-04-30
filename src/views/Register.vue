@@ -13,7 +13,7 @@
 <!--        <td>{{account}}</td>-->
       </tr>
     </table>
-
+    <h1>Transaction history</h1>
   </div>
 </template>
 
@@ -34,7 +34,7 @@ export default {
 
   },
   mounted(){
-    this.$http.get("http://localhost:8080/banksql/all")
+    this.$http.get("api/banksql/all")
     .then(response => this.accounts = response.data);
   }
 }
